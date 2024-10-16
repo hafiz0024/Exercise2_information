@@ -1,0 +1,26 @@
+<!--<h1>GET DATA AND SEND DATA VARIABLES</h1>
+<li><a href="{% url 'getvalue' %}">GET VALUE</a></li> -->
+<h1> WELCOME TO DJANGO VARIABLE </h1>
+<H2>DISPLAY USING VARIABLE</H2>
+{% with firstname="hafiz" %}
+<h1>Hello {{ firstname }}, how are you ? </h1>
+{% endwith %}
+
+
+
+
+<body>
+    <a href="{% url 'view' %}"><H2>DISPLAY USING VARIABLE FROM VIEWS (go to view.html)</H2></a>
+
+    <p></p>
+    <a href="{% url 'database' %}"> <H2>DISPLAY STUDENT CLASS (go to dbstudent.html)</H2> </a>
+    <p></p>
+    <a href="{% url 'view' %}"><H2>DISPLAY BOOK CLASS (go to dbbook.html)</H2></a>
+
+<p></p>
+<a href="{% url 'database' %}"> <H2>DISPLAY  BORROWONG CLASS (go to dbborrow.html)</H2> </a>
+
+<p></p>
+<a href="{% url 'course' %}"> <H2>INSERT COURSE </H2> </a>
+
+</body>

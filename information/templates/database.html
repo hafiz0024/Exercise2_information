@@ -1,0 +1,14 @@
+<H2>DISPLAY USING VARIABLE FROM MODELS</H2>
+<body>
+
+    <table border="1">
+        <th>Code</th><th>Description</th>
+
+    {% for x in mymembers %}
+    <tr>
+    <td>{{ x.code }} </td>
+    <td>{{ x.description }} </td>
+    </tr>
+    {% endfor %}
+    </table>
+    <a href="{% url 'index' %}"> BACK TO HOMEPAGE </a>

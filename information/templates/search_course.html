@@ -1,0 +1,19 @@
+<h1>WELCOME TO KPM INDERA MAHKOTA</h1>
+<strong>SEARCH COURSE</strong><br><br>
+<form action="" method = "get">
+Enter Course : <input type="text" name="c_code">
+<input type="submit" value="SEARCH">
+</form>
+
+<table border="1">
+    <th>Code</th><th>Description</th>
+
+{% for x in data %}
+<tr>
+<td>{{ x.code }} </td>
+<td>{{ x.description }} </td>
+</tr>
+{% endfor %}
+</table>
+<BR><BR>
+<a href="{% url 'index' %}"> BACK TO HOMEPAGE </a>

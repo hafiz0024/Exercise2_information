@@ -1,0 +1,37 @@
+<body>
+    <h1>Get Information</h1>
+    <p>
+    
+    <table>
+    <tr>
+    
+    <th>Codeaaa</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    </tr>
+    {% for data in product %}
+    <tr>
+    {% for details in data %}
+    <td>{{details}}</td>
+    {% endfor %}
+    k/tr>
+    {% endfor %}
+    </table>
+    </p>
+    <br><br>
+    <h1>Order Product</h1>
+    
+    <form action="save_data" method="post">
+    {% csrf_token %}
+    PRODUCT CODE : <input type="text" name="prod_id"> <br><br>
+    QUANTITY : <input type="text" name="prod_qty"><br><br>
+    <input type="submit" value="SAVE">
+    
+    </form>
+
+        
+        {% for x in mymembers %}
+        <h1>{{ x.code }} sini2222</h1>
+        {% endfor %}
+        
